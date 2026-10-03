@@ -2,6 +2,7 @@ package org.mods.gd656killicon;
 
 import java.util.HashMap;
 import java.util.Map;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.loader.api.FabricLoader;
@@ -30,6 +31,7 @@ public class Gd656killiconClient implements ClientModInitializer {
       KillIconRenderer killIconRenderer = new KillIconRenderer();
       HudRenderCallback.EVENT.register(killIconRenderer);
       ClientEventHandler.registerClientTick();
+      ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> org.mods.gd656killicon.client.ClientKillTracker.clear());
       if (FabricLoader.getInstance().isModLoaded("modmenu")) {
          System.out.println("ModMenu detected - configuration screen will be available in mod list");
       } else {

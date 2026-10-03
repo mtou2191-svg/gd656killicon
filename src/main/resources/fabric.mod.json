@@ -13,6 +13,12 @@
   "license": "MIT",
   "icon": "assets/gd656killicon/icon.png",
   "environment": "*",
+  "mixins": [
+    {
+      "config": "gd656killicon.client.mixins.json",
+      "environment": "client"
+    }
+  ],
   "entrypoints": {
     "main": [
       "org.mods.gd656killicon.Gd656killicon"
