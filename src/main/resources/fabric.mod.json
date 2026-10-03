@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "gd656killicon",
+  "version": "${version}",
+  "name": "GD656KillIcon",
+  "description": "GD656Killicon - 作者：Minecraft_GD656",
+  "authors": [
+    "Minecraft_GD656"
+  ],
+  "contact": {
+    "homepage": "https://656.flna.top"
+  },
+  "license": "MIT",
+  "icon": "assets/gd656killicon/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.mods.gd656killicon.Gd656killicon"
+    ],
+    "client": [
+      "org.mods.gd656killicon.Gd656killiconClient"
+    ],
+    "modmenu": [
+      "org.mods.gd656killicon.integration.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

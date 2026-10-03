@@ -1,0 +1,62 @@
+{
+  "combo_1_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_1"]
+  },
+  "combo_2_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_2"]
+  },
+  "combo_3_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_3"]
+  },
+  "combo_4_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_4"]
+  },
+  "combo_5_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_5"]
+  },
+  "combo_6_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/combo_6"]
+  },
+  "kill_sound_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/kill_sound"]
+  },
+  "ultimatekill_sound_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/ultimatekill_sound"]
+  },
+  "assistkill_sound_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/assistkill_sound"]
+  },
+  "combo_1_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_1"]
+  },
+  "combo_2_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_2"]
+  },
+  "combo_3_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_3"]
+  },
+  "combo_4_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_4"]
+  },
+  "combo_5_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_5"]
+  },
+  "combo_6_modern": {
+    "sounds": ["gd656killicon:modern_sounds/combo_6"]
+  },
+  "kill_sound_modern": {
+    "sounds": ["gd656killicon:modern_sounds/kill_sound"]
+  },
+  "ultimatekill_sound_modern": {
+    "sounds": ["gd656killicon:modern_sounds/ultimatekill_sound"]
+  },
+  "assistkill_sound_modern": {
+    "sounds": ["gd656killicon:modern_sounds/assistkill_sound"]
+  },
+  "cardkill_sound_vanilla": {
+    "sounds": ["gd656killicon:vanilla_sounds/cardkill_sound"]
+  },
+  "cardkill_sound_modern": {
+    "sounds": ["gd656killicon:modern_sounds/cardkill_sound"]
+  }
+}
