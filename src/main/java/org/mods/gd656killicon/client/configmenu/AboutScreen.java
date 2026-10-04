@@ -43,9 +43,9 @@ public class AboutScreen extends Screen {
       super.render(guiGraphics, mouseX, mouseY, partialTick);
       int centerX = this.width / 2;
       int centerY = this.height / 2;
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§bGD656Killicon §7- §e完全免费"), centerX, centerY - 30, 16777215);
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§a版本: 1.0.0 公测版 RC5 *Fabric* §7| §6作者: Minecraft_GD656"), centerX, centerY - 10, 16777215);
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§7支持Minecraft: 1.20.1"), centerX, centerY + 10, 16777215);
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("此模组完全免费 若发现倒卖盈利者请立即告知"), centerX, centerY + 60, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§bGD656Killicon §7- §e完全免费"), centerX, centerY - 30, -1);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§a版本: 1.0.0 公测版 RC5 *Fabric* §7| §6作者: Minecraft_GD656"), centerX, centerY - 10, -1);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§7支持Minecraft: 1.20.1"), centerX, centerY + 10, -1);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("此模组完全免费 若发现倒卖盈利者请立即告知"), centerX, centerY + 60, -1);
    }
 }

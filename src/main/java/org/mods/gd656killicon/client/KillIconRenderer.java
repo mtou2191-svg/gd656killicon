@@ -403,14 +403,14 @@ public class KillIconRenderer implements HudRenderCallback {
             int y = 10;
 
             for (String info : debugInfo) {
-               guiGraphics.drawText(mc.textRenderer, info, 10, y, 16777215, false);
+               guiGraphics.drawText(mc.textRenderer, info, 10, y, -1, false);
                y += 10;
             }
 
             for (int i = 0; i < activeScoreItems.size(); i++) {
                ScoreItemRenderer.ScoreItem item = activeScoreItems.get(i);
                String itemInfo = String.format("项 %d: %.1f/%.1f (%s)", i, item.currentPoints, item.targetPoints, item.baseText);
-               guiGraphics.drawText(mc.textRenderer, itemInfo, 10, y, 16777215, false);
+               guiGraphics.drawText(mc.textRenderer, itemInfo, 10, y, -1, false);
                y += 10;
             }
          }

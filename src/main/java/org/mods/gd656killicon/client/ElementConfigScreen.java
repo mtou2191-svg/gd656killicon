@@ -102,7 +102,7 @@ public class ElementConfigScreen extends Screen {
    }
 
    public void render(@NotNull DrawContext guiGraphics, int mouseX, int mouseY, float partialTick) {
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, -1);
       if (this.element.type == ModConfigScreen.ElementType.ICON) {
          String sharedText = switch (Config.iconMode) {
             case SCROLLING -> "滚动模式专用配置";
@@ -373,7 +373,7 @@ public class ElementConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, -1);
             this.checkbox.setX(left + width - 30);
             this.checkbox.setY(top);
             this.checkbox.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -405,7 +405,7 @@ public class ElementConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawCenteredTextWithShadow(MinecraftClient.getInstance().textRenderer, this.text, left + width / 2, top + 5, 16777215);
+            guiGraphics.drawCenteredTextWithShadow(MinecraftClient.getInstance().textRenderer, this.text, left + width / 2, top + 5, -1);
          }
 
          @NotNull
@@ -442,7 +442,7 @@ public class ElementConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, -1);
             if (this.isColorOption) {
                this.editBox.setX(left + width - 150 + 75);
                this.editBox.setY(top - 2);
@@ -504,7 +504,7 @@ public class ElementConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, -1);
             this.styleButton.setX(left + width - 100 - 10);
             this.styleButton.setY(top - 2);
             this.styleButton.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -540,7 +540,7 @@ public class ElementConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, this.label, left + 10, top + 5, -1);
             this.slider.setX(left + width - 100 - 10);
             this.slider.setY(top - 2);
             this.slider.render(guiGraphics, mouseX, mouseY, partialTick);

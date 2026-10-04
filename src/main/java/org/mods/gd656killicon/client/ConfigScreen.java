@@ -107,7 +107,7 @@ public class ConfigScreen extends Screen {
          }
       }
 
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, -1);
       if (this.resetConfirmation && System.currentTimeMillis() - this.resetConfirmationTime > 3000L) {
          this.resetConfirmation = false;
          if (this.resetButton != null) {
@@ -397,7 +397,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, -1);
             this.checkbox.setX(left + width - 150);
             this.checkbox.setY(top);
             this.checkbox.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -429,7 +429,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawCenteredTextWithShadow(ConfigScreen.this.textRenderer, this.text, left + width / 2, top + 5, 16777215);
+            guiGraphics.drawCenteredTextWithShadow(ConfigScreen.this.textRenderer, this.text, left + width / 2, top + 5, -1);
          }
 
          @NotNull
@@ -474,7 +474,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, -1);
             if (this.isColorOption) {
                this.editBox.setX(left + width - 150 + 75);
                this.editBox.setY(top);
@@ -542,7 +542,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, -1);
             this.styleButton.setX(left + width - 150);
             this.styleButton.setY(top);
             this.styleButton.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -582,7 +582,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, -1);
             this.modeButton.setX(left + width - 150);
             this.modeButton.setY(top);
             this.modeButton.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -622,7 +622,7 @@ public class ConfigScreen extends Screen {
             int top = this.getY();
             int left = this.getX();
             int width = this.getWidth();
-            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, 16777215);
+            guiGraphics.drawTextWithShadow(ConfigScreen.this.textRenderer, this.label, left, top + 5, -1);
             this.slider.setX(left + width - 150);
             this.slider.setY(top);
             this.slider.render(guiGraphics, mouseX, mouseY, partialTick);

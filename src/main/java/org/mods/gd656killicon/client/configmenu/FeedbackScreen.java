@@ -42,8 +42,8 @@ public class FeedbackScreen extends Screen {
       super.render(guiGraphics, mouseX, mouseY, partialTick);
       int centerX = this.width / 2;
       int centerY = this.height / 2;
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§c如有问题或建议，请通过以下方式联系我们:"), centerX, centerY - 20, 16777215);
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§a加入我们的官方QQ群: 1033096961"), centerX, centerY + 20, 16777215);
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§c感谢您的支持！"), centerX, centerY + 40, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§c如有问题或建议，请通过以下方式联系我们:"), centerX, centerY - 20, -1);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§a加入我们的官方QQ群: 1033096961"), centerX, centerY + 20, -1);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, Text.literal("§c感谢您的支持！"), centerX, centerY + 40, -1);
    }
 }

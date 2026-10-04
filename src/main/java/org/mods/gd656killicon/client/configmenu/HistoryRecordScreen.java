@@ -68,7 +68,7 @@ public class HistoryRecordScreen extends Screen {
    public void render(@NotNull DrawContext guiGraphics, int mouseX, int mouseY, float partialTick) {
       this.currentMouseX = mouseX;
       this.currentMouseY = mouseY;
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, -1);
       if (!this.hasRecords) {
          guiGraphics.drawCenteredTextWithShadow(this.textRenderer, "暂无历史记录", this.width / 2, this.height / 2, 8947848);
       } else {
@@ -118,16 +118,16 @@ public class HistoryRecordScreen extends Screen {
       int textY = rowY + (this.rowHeight - 9) / 2;
       guiGraphics.drawText(this.textRenderer, record.entityName, this.tableX + 10, textY, record.isPlayer ? -256 : -1, true);
       guiGraphics.drawText(this.textRenderer, record.damageInfo, this.tableX + 160, textY, record.isKill ? -43691 : -1, true);
-      guiGraphics.drawText(this.textRenderer, record.weaponInfo, this.tableX + 260, textY, 16777215, true);
+      guiGraphics.drawText(this.textRenderer, record.weaponInfo, this.tableX + 260, textY, -1, true);
    }
 
    private void renderTableHeader(DrawContext guiGraphics) {
       int headerY = this.tableY + 5;
       guiGraphics.fill(this.tableX, this.tableY, this.tableX + this.tableWidth, this.tableY + 25, -2143009724);
       guiGraphics.fill(this.tableX, this.tableY + 25, this.tableX + this.tableWidth, this.tableY + 26, -10066330);
-      guiGraphics.drawText(this.textRenderer, "实体名称", this.tableX + 10, headerY, 16777215, true);
-      guiGraphics.drawText(this.textRenderer, "伤害信息", this.tableX + 160, headerY, 16777215, true);
-      guiGraphics.drawText(this.textRenderer, "武器信息", this.tableX + 260, headerY, 16777215, true);
+      guiGraphics.drawText(this.textRenderer, "实体名称", this.tableX + 10, headerY, -1, true);
+      guiGraphics.drawText(this.textRenderer, "伤害信息", this.tableX + 160, headerY, -1, true);
+      guiGraphics.drawText(this.textRenderer, "武器信息", this.tableX + 260, headerY, -1, true);
       guiGraphics.fill(this.tableX + 150, this.tableY, this.tableX + 151, this.tableY + this.tableHeight, -10066330);
       guiGraphics.fill(this.tableX + 250, this.tableY, this.tableX + 251, this.tableY + this.tableHeight, -10066330);
    }

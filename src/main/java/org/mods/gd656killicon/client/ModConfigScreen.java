@@ -116,7 +116,7 @@ public class ModConfigScreen extends Screen {
          this.resetButton.setMessage(Text.translatable("gd656killicon.modconfig.reset"));
       }
 
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 20, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 20, -1);
       String modeText = "当前模式: " + this.currentEditMode.displayName;
       guiGraphics.drawText(
          this.textRenderer, modeText, this.width / 2 - this.textRenderer.getWidth(modeText) / 2, 40, this.currentEditMode.color, true
@@ -946,7 +946,7 @@ public class ModConfigScreen extends Screen {
          int textWidth = mc.textRenderer.getWidth(this.label);
          int textX = this.x + (this.width - textWidth) / 2;
          int textY = this.y + (this.height - 9) / 2 + 1;
-         guiGraphics.drawText(mc.textRenderer, this.label, textX, textY, 16777215, true);
+         guiGraphics.drawText(mc.textRenderer, this.label, textX, textY, -1, true);
       }
    }
 

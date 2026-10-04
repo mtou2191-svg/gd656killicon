@@ -46,7 +46,7 @@ public class HelpScreen extends Screen {
    }
 
    public void render(@NotNull DrawContext guiGraphics, int mouseX, int mouseY, float partialTick) {
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 15, -1);
       this.renderCategoryButtons(guiGraphics, mouseX, mouseY);
       this.contentArea.render(guiGraphics);
       if (this.searchBox.getText().isEmpty() && !this.searchBox.isFocused()) {
@@ -352,7 +352,7 @@ public class HelpScreen extends Screen {
          guiGraphics.fill(this.x, this.y, this.x + this.width, this.y + this.height, fillColor);
          RenderHelper.drawBorder(guiGraphics, this.x, this.y, this.width, this.height, borderColor);
          Integer categoryColor = this.category.color.getColorValue();
-         int textColor = isSelected ? (categoryColor == null ? 16777215 : categoryColor) : 16777215;
+         int textColor = isSelected ? (categoryColor == null ? -1 : categoryColor) : -1;
          guiGraphics.drawCenteredTextWithShadow(HelpScreen.this.textRenderer, this.category.displayName, this.x + this.width / 2, this.y + (this.height - 8) / 2, textColor);
       }
    }
@@ -436,7 +436,7 @@ public class HelpScreen extends Screen {
 
          for (Text line : this.content) {
             if (textY + 9 >= this.y && textY <= this.y + this.height) {
-               guiGraphics.drawText(HelpScreen.this.textRenderer, line, this.x + 10, textY, 16777215, false);
+               guiGraphics.drawText(HelpScreen.this.textRenderer, line, this.x + 10, textY, -1, false);
             }
 
             textY += 9 + 2;

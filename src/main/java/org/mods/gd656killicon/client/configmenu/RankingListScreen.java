@@ -66,11 +66,11 @@ public class RankingListScreen extends Screen {
    public void render(@NotNull DrawContext guiGraphics, int mouseX, int mouseY, float partialTick) {
       this.currentMouseX = mouseX;
       this.currentMouseY = mouseY;
-      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 16777215);
+      guiGraphics.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, -1);
       if (!this.isInGame) {
          guiGraphics.drawCenteredTextWithShadow(this.textRenderer, "请在游戏内查看排行榜", this.width / 2, this.height / 2, 16733525);
       } else if (this.isLoading) {
-         guiGraphics.drawCenteredTextWithShadow(this.textRenderer, "正在加载排行榜数据...", this.width / 2, this.height / 2, 16777215);
+         guiGraphics.drawCenteredTextWithShadow(this.textRenderer, "正在加载排行榜数据...", this.width / 2, this.height / 2, -1);
       } else if (!this.rankingEnabled) {
          guiGraphics.drawCenteredTextWithShadow(this.textRenderer, "榜单已被管理员关闭", this.width / 2, this.height / 2, 16733525);
       } else if (!this.hasData) {
@@ -165,17 +165,17 @@ public class RankingListScreen extends Screen {
    private void renderRowData(DrawContext guiGraphics, RankingListScreen.RankingEntry entry, int rowY) {
       int textY = rowY + (this.rowHeight - 9) / 2;
       guiGraphics.drawText(this.textRenderer, String.valueOf(entry.rank), this.tableX + 10, textY, this.getRankColor(entry.rank), true);
-      guiGraphics.drawText(this.textRenderer, entry.playerName, this.tableX + 80, textY, 16777215, true);
-      guiGraphics.drawText(this.textRenderer, String.format("%,d", entry.score), this.tableX + 290, textY, 16777215, true);
+      guiGraphics.drawText(this.textRenderer, entry.playerName, this.tableX + 80, textY, -1, true);
+      guiGraphics.drawText(this.textRenderer, String.format("%,d", entry.score), this.tableX + 290, textY, -1, true);
    }
 
    private void renderTableHeader(DrawContext guiGraphics) {
       int headerY = this.tableY + 5;
       guiGraphics.fill(this.tableX, this.tableY, this.tableX + this.tableWidth, this.tableY + 25, -2143009724);
       guiGraphics.fill(this.tableX, this.tableY + 25, this.tableX + this.tableWidth, this.tableY + 26, -10066330);
-      guiGraphics.drawText(this.textRenderer, "排名", this.tableX + 10, headerY, 16777215, true);
-      guiGraphics.drawText(this.textRenderer, "玩家名称", this.tableX + 80, headerY, 16777215, true);
-      guiGraphics.drawText(this.textRenderer, "分数", this.tableX + 290, headerY, 16777215, true);
+      guiGraphics.drawText(this.textRenderer, "排名", this.tableX + 10, headerY, -1, true);
+      guiGraphics.drawText(this.textRenderer, "玩家名称", this.tableX + 80, headerY, -1, true);
+      guiGraphics.drawText(this.textRenderer, "分数", this.tableX + 290, headerY, -1, true);
       guiGraphics.fill(this.tableX + 70, this.tableY, this.tableX + 71, this.tableY + this.tableHeight, -10066330);
       guiGraphics.fill(this.tableX + 280, this.tableY, this.tableX + 281, this.tableY + this.tableHeight, -10066330);
    }
