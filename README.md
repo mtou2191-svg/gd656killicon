@@ -3,7 +3,7 @@
 原仓库：https://github.com/MinecraftGD656/gd656killicon
 原作者：Minecraft_GD656
 
-基于 1.20.1 的 1.0.0RC5 移植到 1.21.11，功能没动，只做了版本适配。
+基于 1.20.1 的 1.0.0RC5 移植到 1.21.11，功能没动，只做了版本适配。移植过程中使用了AI辅助。
 
 需要 Fabric Loader 0.19.5 以上、Fabric API 和 Java 21，Mod Menu 可装可不装。
 
