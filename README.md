@@ -15,7 +15,7 @@
 
 能判定到的只有近战和自己射出去的箭、三叉戟。近战就是看 5 秒内有没有打过
 这个生物，暴击照原版条件算；远程的话死亡点附近 4 格内有属于自己的弹射物
-就算。分数、助攻、远距离、魔法伤害还有别的 mod 的枪械弹丸这些判定不了，
+就算。但因为做的是移植所以矛还没有进行适配。分数、助攻、远距离、魔法伤害还有别的 mod 的枪械弹丸这些判定不了，
 本来就得靠服务端。
 
 ## 适配过程中碰到的坑
@@ -26,10 +26,5 @@ GUI 的矩阵从 MatrixStack 换成了 JOML 的 Matrix3x2fStack，push/pop、
 translate、scale、旋转的写法全变了。鼠标事件统一成 Click 记录类型。
 DrawContext.drawBorder 没了，边框自己拿四次 fill 拼。聊天组件的点击和悬停
 事件改成了 ClickEvent.RunCommand 和 HoverEvent.ShowText。
-
-另外两个运行时才炸出来的问题：空网络包不能每次 new，unit 编解码器会校验
-是不是同一个对象，new 出来的发出去直接断连，要改成单例；持久化数据原来在
-SERVER_STARTING 里取，这个时候主世界还没建好，会空指针，挪到 SERVER_STARTED
-才行。还有界面的 renderBackground 现在框架每帧自己会调，手动再调一次直接崩。
 
 许可沿用原仓库的 MIT。
